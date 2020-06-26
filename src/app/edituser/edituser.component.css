@@ -22,12 +22,13 @@
 }
 
 .booking-form {
-	background: blue;
+	background: yellowgreen;
 	padding: 40px;
-	border-radius: 6px;
+	border-radius: 10px;
 	margin: auto;
 	
 }
+
 
 .booking-form .form-group {
 	position: relative;
@@ -98,7 +99,7 @@
 	line-height: 24px;
 	height: 24px;
 	font-size: 12px;
-	color: #fff;
+	color:black;
 }
 
 .booking-form .form-checkbox input {
@@ -184,4 +185,20 @@
 
 .pointer{
     cursor: pointer;
+}
+.viewprofile
+{
+	opacity:0.7;
+	border-radius: 10px;
+	border-style: double;
+}
+
+.editcard
+{
+	margin: auto;
+	background-color:#ffbf00;
+}
+.userlist
+{
+	background-color: sandybrown;
 }

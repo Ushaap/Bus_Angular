@@ -22,11 +22,11 @@
 }
 
 .booking-form {
-	background: blue;
+	background: rgba(0, 0, 0, 0.7);
 	padding: 40px;
 	border-radius: 6px;
 	margin: auto;
-	
+	width: 493px;
 }
 
 .booking-form .form-group {
@@ -180,8 +180,4 @@
 }
 .subBtn{
 	text-align: center;
-}
-
-.pointer{
-    cursor: pointer;
 }

@@ -10,14 +10,16 @@ import { BusService } from '../bus.service';
 })
 export class RegisterComponent implements OnInit {
   registerform;
+  result;
   constructor(private busservice:BusService,private router:Router) {
     this.registerform = new FormGroup({
-      name : new FormControl('',Validators.required),
-      email:new FormControl('',[Validators.required,Validators.email]),
-      password:new FormControl('',[Validators.required]),
-      confirmpassword: new FormControl('',Validators.required),
-      phone:new FormControl('',Validators.required),
-      bus: new FormControl()
+      'type':new FormControl('',Validators.required),
+      'dob':new FormControl(''),
+      'name': new FormControl('', Validators.required),      
+      'email': new FormControl('', [Validators.email, Validators.required]),
+      'phone':new FormControl('',Validators.minLength(10)),
+      'password': new FormControl('', [Validators.required, Validators.minLength(6)])
+    
    })
   }
 
@@ -26,19 +28,15 @@ export class RegisterComponent implements OnInit {
   }
   createdata()
   {
-    if(this.registerform.valid){
-    console.log(this.registerform.value)
-    if(this.registerform.value.bus ==true)
+    if(this.registerform.valid)
     {
-      this.registerform.value.accstatus ="pending"
+      console.log(this.registerform.value);
+      this.busservice.registerUser(this.registerform.value).subscribe((data)=>{
+        this.result=data;
+        console.log(this.result)
+        this.router.navigate(['/login']);
+      })
     }
-    this.busservice.registerUser(this.registerform.value).subscribe((data)=>{
-      console.log(data)
-      this.router.navigate(['login'])
-
-    })
   }
-  }
-
 
 }

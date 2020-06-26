@@ -1,6 +1,6 @@
 .section {
 	position: relative;
-	height: 100vh;
+	height: 110vh;
 }
 
 .section .section-center {
@@ -22,10 +22,11 @@
 }
 
 .booking-form {
-	background: blue;
+	background: rgba(0, 0, 0, 0.7);
 	padding: 40px;
 	border-radius: 6px;
 	margin: auto;
+	width: 868px;
 	
 }
 
@@ -175,13 +176,28 @@
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
     opacity: 0.9;
-    margin: 0;
     
 }
-.subBtn{
-	text-align: center;
+h4{
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	font-size: 25px;
+	opacity: .9;
+	border-radius: 10px;
 }
 
-.pointer{
-    cursor: pointer;
+.booklink
+{
+	color: gray;
+    cursor: not-allowed;
+    text-decoration: underline;
+}
+
+.welcome
+{
+	background-color: firebrick;
+    font-style: italic;
+    font-family: auto;
+
 }
